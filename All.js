@@ -44,3 +44,6 @@ async function uploadFile(){
     a.onchange = function(){resolve(a.files[0])}
     })
 }
+function evalV2(script) {
+    return (new Function(script))();
+}
