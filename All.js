@@ -36,3 +36,11 @@ Math.random = function random(min,max,raw=false){
         return Math.floor(Math.random() * (max - min + 1) / 1 + min);
     }
 }
+async function uploadFile(){
+    return new Promise(function(resolve){
+    var a = document.createElement("input")
+    a.type = 'file'
+    a.click()
+    a.onchange = function(){resolve(a.files[0])}
+    })
+}
